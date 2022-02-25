@@ -23,7 +23,7 @@ function Copyright(props) {
 
 const theme = createTheme();
 
-export default function SignIn({ setName }) {
+export default function Signin({ setName }) {
   const handleSubmit = (event) => {
     event.preventDefault();
     const data = new FormData(event.currentTarget);
@@ -69,11 +69,14 @@ export default function SignIn({ setName }) {
               onChange={(e) => setString(e.target.value)}
             />
             <Button
-              type="submit"
+              type="button"
               fullWidth
               variant="contained"
               sx={{ mt: 3, mb: 2 }}
               disabled={disabled}
+              onClick={() => {
+                setName(string);
+              }}
             >
               はじめる
             </Button>
