@@ -1,10 +1,10 @@
 import React, {useState} from 'react';
 
-import Signin from './Signin';
+import SignIn from './SignIn';
 
 export default () => {
   const [name, setName] = useState('');
   console.log({ name });
 
-  return <Signin setName={setName }/>;
+  return <SignIn setName={setName }/>;
 };

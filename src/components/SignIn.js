@@ -23,7 +23,7 @@ function Copyright(props) {
 
 const theme = createTheme();
 
-export default function Signin({ setName }) {
+export default function SignIn({ setName }) {
   const handleSubmit = (event) => {
     event.preventDefault();
     const data = new FormData(event.currentTarget);
@@ -67,6 +67,12 @@ export default function Signin({ setName }) {
               name="name"
               autoFocus
               onChange={(e) => setString(e.target.value)}
+              onKeyDown={(e) => {
+                if (e.key === 'Enter') {
+                  setName(e.target.value);
+                  e.preventDefault();
+                }
+              }}
             />
             <Button
               type="button"
