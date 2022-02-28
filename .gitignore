@@ -25,4 +25,5 @@ yarn-error.log*
 /.bash_histor
 /.firebaserc
 /firebase.json
+/.firebase
 
